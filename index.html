@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="es">
+<head> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- SEO / Redes sociales: así se ve el link cuando lo compartes en WhatsApp, Facebook, etc. -->
+<meta name="description" content="Renta de motos, carros, mulas, lanchas, pontones y parasail en San Andrés Isla. Reserva por WhatsApp y sal el mismo día.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Coco Explore SAI — Vive San Andrés por tierra y por mar">
+<meta property="og:description" content="Motos, carros, mulas, lanchas y pontones para explorar la isla a tu ritmo. Vive la adrenalina del parasail y llévate el recuerdo en foto. Reserva por WhatsApp y sal el mismo día.">
+<meta property="og:image" content="data/logo_cropped.png">
+<meta property="og:locale" content="es_CO">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Coco Explore SAI — Vive San Andrés por tierra y por mar">
+<meta name="twitter:description" content="Motos, carros, mulas, lanchas, pontones y parasail en San Andrés Isla. Reserva por WhatsApp.">
+<meta name="twitter:image" content="data/logo_cropped.png">
+
+<!-- Favicon: usa tu logo como ícono de la pestaña del navegador -->
+<link rel="icon" type="image/png" href="data/logo_cropped.png">
+<link rel="apple-touch-icon" href="data/logo_cropped.png">
+
+<title>Coco Explore SAI — Tours & Vehicle Rentals</title>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <div class="logo-group">
+        <img src="data/logo_cropped.png" alt="Coco Explore SAI" style="height:84px; width:auto; object-fit:contain;">
+        <div class="logo-name">Coco Explore SAI</div>
+      </div>
+      <div class="nav-links">
+        <a href="#servicios">Servicios</a>
+        <a href="#fotos">Fotos</a>
+        <a href="#trabajaconnosotros">¿Cómo contactarnos?</a>
+        <a href="#que-hacer">¿Qué hacer?</a>
+        <a href="#alianzas"> Alianzas</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <a href="#contacto" class="nav-cta nav-cta-desktop">Reservar ahora</a>
+
+      <!-- Botón hamburguesa: solo visible en móvil -->
+      <button class="nav-burger" id="navBurger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Menú móvil deslizable -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#servicios">Servicios</a>
+    <a href="#fotos">Fotos</a>
+    <a href="#trabajaconnosotros">¿Cómo contactarnos?</a>
+    <a href="#que-hacer">¿Qué hacer?</a>
+    <a href="#alianzas">Alianzas</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contacto" class="mobile-menu-cta">Reservar ahora</a>
+  </div>
+  <div class="mobile-menu-backdrop" id="mobileMenuBackdrop"></div>
+
+
+  <!-- BARRA DE CLIMA EN VIVO -->
+  <div class="weather-bar" id="weather-bar">
+    <span class="weather-emoji">🌤️</span>
+    <span id="weather-text">Cargando el clima de San Andrés...</span>
+    <span>·</span>
+    <b id="weather-cta">¡Perfecto para salir a explorar! 🏝️</b>
+  </div>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="wrap">
+      <div class="eyebrow-pill">San Andrés Island · Colombia</div>
+      <h1>Vive San Andrés <span>por tierra y por mar</span></h1>
+      <p>Motos, carros, mulas, lanchas y pontones para explorar la isla a tu ritmo. Vive la adrenalina del parasail y llévate el recuerdo en foto. Reserva por WhatsApp y sal el mismo día.</p>
+      <div class="hero-buttons">
+        <a href= "javascript:void(0)" onclick="abrirWhatsApp()" class="btn-primary wa-reserve-btn">🥥 Reservar por WhatsApp</a>
+        <a href="#servicios" class="btn-secondary">Ver servicios</a>
+      </div>
+      <div class="hero-stats">
+        <div><div class="stat-num" data-target="7" data-decimals="0">0</div><div class="stat-label">Servicios disponibles</div></div>
+        <div><div class="stat-num" data-target="4.9" data-decimals="1" data-suffix="★">0★</div><div class="stat-label">Calificación</div></div>
+        <div><div class="stat-num" id="tourist-count" data-target="500" data-suffix="+">0+</div><div class="stat-label">Turistas atendidos</div></div>
+        <div><div class="stat-num" data-target="24" data-suffix="/7">0/7</div><div class="stat-label">Soporte en ruta</div></div>
+      </div>
+    </div>
+    <svg class="waves-bottom" viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="height:80px; width:100%;">
+      <path d="M0,40 Q180,80 360,40 T720,40 T1080,40 T1440,40 L1440,80 L0,80 Z" fill="#F7F1E3"/>
+    </svg>
+  </header>
+
+  <!-- PROBLEMAS QUE RESOLVEMOS (bento) -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">¿Te suena familiar?</div>
+        <div class="section-title">Problemas que resolvemos</div>
+        <div class="section-sub">Llegar a una isla nueva sin saber cómo moverte —ni por tierra ni por mar— puede arruinar tus vacaciones. Por eso existimos.</div>
+      </div>
+      <div class="problems-grid-v2">
+        <div class="problem-card-v2">
+          <div class="problem-card-v2-icon"> <i class="fa-solid fa-taxi"></i> </div>
+          <div class="problem-card-v2-title">Depender de taxis</div>
+          <div class="problem-card-v2-desc">Esperar y pagar de más por cada trayecto corto.</div>
+        </div>
+        <div class="problem-card-v2">
+          <div class="problem-card-v2-icon"> <i class="fa-solid fa-map"></i> </div>
+          <div class="problem-card-v2-title">No conocer la isla</div>
+          <div class="problem-card-v2-desc">Perderte las playas y miradores que no salen en Google.</div>
+        </div>
+        <div class="problem-card-v2">
+          <div class="problem-card-v2-icon"> <i class="fa-solid fa-users"></i> </div>
+          <div class="problem-card-v2-title">Grupos grandes</div>
+          <div class="problem-card-v2-desc">No caber todos en un solo taxi o mula pequeña.</div>
+        </div>
+        <div class="problem-card-v2">
+          <div class="problem-card-v2-icon"> <i class="fa-solid fa-plane"></i> </div>
+          <div class="problem-card-v2-title">Llegar cansado</div>
+          <div class="problem-card-v2-desc">Bajarte del avión y no saber cómo llegar al hotel.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS (bento) -->
+  <section class="section" id="servicios" style="background: var(--blanco);">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Nuestros servicios</div>
+        <div class="section-title">Elige tu plan ideal</div>
+        <div class="section-sub">Tierra y mar en un solo lugar: vehículos, embarcaciones y experiencias.</div>
+      </div>
+      <div class="bento-wrap">
+        <div class="bento-featured bento-featured-service">
+          <div class="featured-tag">MÁS POPULAR</div>
+          <div class="bento-featured-icon"> <i class="fa-solid fa-golf-ball-tee"></i> </div>  
+          <div class="bento-featured-title">Renta de Mula</div>
+          <div class="bento-featured-desc">El clásico carrito de golf: la forma más divertida y típica de recorrer San Andrés.</div>
+          <a href="#" onclick="mostrarContacto(); return false;" class="bento-featured-btn">Solicitar información →</a>
+        </div>
+        <div class="bento-grid bento-grid-services">
+          <div class="bento-small bento-small-click" onclick="mostrarContacto()">
+            <div class="bento-small-icon"> <i class="fa-solid fa-motorcycle"></i> </div>
+            <div>
+              <div class="bento-small-title">Renta de Moto</div>
+              <div class="bento-small-desc">Ágil y económica, para uno o dos.</div>
+            </div>
+          </div>
+          <div class="bento-small bento-small-click" onclick="mostrarContacto()">
+            <div class="bento-small-icon"> <i class="fa-solid fa-car"></i> </div>
+            <div>
+              <div class="bento-small-title">Renta de Carro</div>
+              <div class="bento-small-desc">Comodidad para grupos y familias.</div>
+            </div>
+          </div>
+          <div class="bento-small bento-small-click" onclick="mostrarContacto()">
+            <div class="bento-small-icon"> <i class="fa-solid fa-ship"></i> </div>
+            <div>
+              <div class="bento-small-title">Renta de Lancha</div>
+              <div class="bento-small-desc">Recorre cayos y el mar de siete colores.</div>
+            </div>
+          </div>
+          <div class="bento-small bento-small-click" onclick="mostrarContacto()">
+            <div class="bento-small-icon"> <i class="fa-solid fa-life-ring"></i> </div>
+            <div>
+              <div class="bento-small-title">Renta de Pontón</div>
+              <div class="bento-small-desc">Ideal para grupos grandes.</div>
+            </div>
+          </div>
+          <div class="bento-small bento-small-click" onclick="mostrarContacto()">
+            <div class="bento-small-icon"> <i class="fa-solid fa-parachute-box"></i> </div>
+            <div>
+              <div class="bento-small-title">Parasail</div>
+              <div class="bento-small-desc">Vuela sobre el mar Caribe.</div>
+            </div>
+          </div>
+          <div class="bento-small bento-small-click" onclick="mostrarContacto()">
+            <div class="bento-small-icon"> <i class="fa-solid fa-map-location-dot"></i> </div>
+            <div>
+              <div class="bento-small-title">Tour Guiado</div>
+              <div class="bento-small-desc">San Luis, Hoyo Soplador, West View.</div>
+            </div>
+          </div>
+          <div class="bento-small bento-small-click" onclick="mostrarContacto()">
+            <div class="bento-small-icon"> <i class="fa-solid fa-camera-retro"></i> </div>
+            <div>
+              <div class="bento-small-title">Fotografía Profesional</div>
+              <div class="bento-small-desc">El recuerdo completo de tu tour.</div>
+            </div>
+          </div>
+          <div class="bento-small bento-small-click" onclick="mostrarContacto()">
+            <div class="bento-small-icon"> <i class="fa-solid fa-plane-departure"></i> </div>
+            <div>
+              <div class="bento-small-title">Traslado Aeropuerto</div>
+              <div class="bento-small-desc">Te llevamos directo a tu hotel.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+ <!-- GALERIA / FOTOS — la foto ahora es la protagonista, el texto es un overlay delgado -->
+  <section class="section" id="fotos">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Nuestros servicios</div>
+        <div class="section-title">Descúbrelos en fotos</div>
+        <div class="section-sub">Desliza para conocer cada vehículo y experiencia disponible.</div>
+      </div>
+      <div class="gallery-carousel">
+        <div class="gallery-arrow" id="galArrowLeft" aria-label="Anterior">←</div>
+        <div class="gallery-viewport">
+          <div class="gallery-track" id="galTrack">
+
+            <div class="gallery-card">
+              <div class="gallery-visual"><img src="data/Galeria/Mula.png" alt="Renta de mula" loading="lazy"></div>
+              <div class="gallery-body">
+                <div class="gallery-title">Renta de mula</div>
+                <div class="gallery-desc"> Recorre San Andrés a tu ritmo en el tradicional carrito de golf. Ideal para familias, parejas y grupos que buscan comodidad y diversión.</div>
+              </div>
+            </div>
+
+            <!-- ESPACIO FOTO -->
+            <div class="gallery-card">
+              <div class="gallery-visual"><img src="data/Galeria/Lancha.png" alt="Lancha y Parasail" loading="lazy"></div>
+              <div class="gallery-body">
+                <div class="gallery-title">Lancha y Parasail </div>
+                <div class="gallery-desc"> Navega por el mar de los siete colores y vive la emoción de volar sobre el Caribe en una experiencia inolvidable.</div>
+              </div>
+            </div>
+
+
+            <div class="gallery-card">
+               <div class="gallery-visual"><img src="data/Galeria/Moto.png" alt="Renta de motos" loading="lazy"></div>
+              <div class="gallery-body">
+                <div class="gallery-title">Renta de motos</div>
+                <div class="gallery-desc"> Muévete con total libertad y descubre playas, miradores y rincones únicos de la isla de forma rápida y económica. </div>
+              </div>
+            </div>
+
+
+            <div class="gallery-card">
+              <div class="gallery-visual"><img src="data/Galeria/Poton.png" alt="Renta de Pontón" loading="lazy"></div>
+              <div class="gallery-body">
+                <div class="gallery-title">Renta de Pontón</div>
+                <div class="gallery-desc"> La mejor opción para grupos y familias. Disfruta un día de navegación con amplio espacio para relajarte, nadar y compartir.</div>
+              </div>
+            </div>
+
+      
+            <div class="gallery-card">
+              <div class="gallery-visual"><img src="data/Galeria/Mula2.png" alt="Renta para explorar" loading="lazy"></div>
+              <div class="gallery-body">
+                <div class="gallery-title">Explora la Isla</div>
+                <div class="gallery-desc"> Conduce alrededor de toda la isla, visita San Luis, el Hoyo Soplador, West View y disfruta cada parada a tu propio ritmo.</div>
+              </div>
+            </div>
+
+
+            <div class="gallery-card">
+              <div class="gallery-visual"><img src="data/Galeria/parasail.png" alt="Parasail" loading="lazy"></div>
+              <div class="gallery-body">
+                <div class="gallery-title">Parasail</div>
+                <div class="gallery-desc"> Eleva tu aventura hasta 100 metros de altura y contempla una vista panorámica espectacular del mar Caribe y San Andrés.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-arrow" id="galArrowRight" aria-label="Siguiente">→</div>
+      </div>
+      <div class="gallery-dots" id="galDots"></div>
+    </div>
+  </section>
+
+
+
+
+   <!-- COMO FUNCIONA -->
+  <section class="section" id="trabajaconnosotros">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Reserva fácil</div>
+        <div class="section-title">Cómo trabajar con nosotros</div>
+        <div class="section-sub">Tres pasos y ya estás explorando la isla.</div>
+      </div>
+      <div class="steps-row">
+        <div class="step-card">
+          <div class="step-num-circle">01</div>
+          <div class="step-title">Solicita tu reserva</div>
+          <div class="step-desc">Indícanos el vehículo o experiencia que deseas, las fechas de tu viaje y el número de personas. Puedes contactarnos por WhatsApp o Instagram.</div>
+        </div>
+        <div class="step-card">
+          <div class="step-num-circle">02</div>
+          <div class="step-title">Confirma tu reserva</div>
+          <div class="step-desc">Verificamos la disponibilidad, te enviamos la cotización y, una vez realizado el depósito, tu reserva quedará confirmada.</div>
+        </div>
+        <div class="step-card">
+          <div class="step-num-circle">03</div>
+          <div class="step-title">Recibe y disfruta</div>
+          <div class="step-desc">Entregamos el vehículo en tu ubicación o coordinamos tu experiencia para que solo te preocupes por disfrutar San Andrés.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUE HACER EN SAN ANDRES -->
+  <section class="section" id="que-hacer" style="background: var(--blanco);">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Descubre la isla</div>
+        <div class="section-title">¿Qué hacer en San Andrés Isla?</div>
+        <div class="section-sub">Te contamos las principales actividades y experiencias que puedes realizar en este destino turístico.</div>
+      </div>
+      <div class="activity-grid" id="activityGrid"></div>
+      <div style="text-align:center; margin-top:28px;">
+        <button id="loadMoreBtn" class="load-more-btn">Cargar más actividades ↓</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ALIANZAS -->
+  <section class="section" id="alianzas" style="padding-top:0;">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Con quién trabajamos</div>
+        <div class="section-title">Alianzas en la isla</div>
+        <div class="section-sub">Cada aliado tiene su propio contacto o red social — pronto verás el link directo aquí.</div>
+      </div>
+      <div class="partners-row">
+        <a class="partner-chip">🏨 Hoteles del centro</a>
+        <a class="partner-chip">🤿 Centros de buceo</a>
+        <a class="partner-chip">⛵ Operadores de lancha</a>
+        <a class="partner-chip">🪂 Parasail</a>
+        <a class="partner-chip">📷 Fotografía Profesional</a>
+        <a class="partner-chip">✈️ Agencias de viaje</a>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- FAQ -->
+  <section class="section" id="faq" style="background: var(--blanco);">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Dudas frecuentes</div>
+        <div class="section-title">Preguntas y respuestas</div>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span>🥥 ¿Necesito licencia para conducir la mula?</span>
+            <span class="faq-chevron">⌄</span>
+          </button>
+          <div class="faq-a">Para motos, carros y mulas  sí es necesario presentar una licencia de conducción vigente (física o una foto/copia clara de la misma).</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span>🥥 ¿Cuál es el horario de entrega y devolución?</span>
+            <span class="faq-chevron">⌄</span>
+          </button>
+          <div class="faq-a">Entregamos el vehículo a las 8:30 a.m. y debe devolverse antes de las 6:00 p.m. del mismo día.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span>🥥 ¿En qué condiciones debo devolver el vehículo?</span>
+            <span class="faq-chevron">⌄</span>
+          </button>
+          <div class="faq-a">Lo entregamos con el tanque de gasolina lleno; el turista debe devolverlo también con el tanque lleno.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span>🥥 ¿El alquiler incluye seguro?</span>
+            <span class="faq-chevron">⌄</span>
+          </button>
+          <div class="faq-a">Sí, todos los vehículos incluyen cobertura básica. Te explicamos los detalles al momento de la entrega.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span>🥥 ¿Puedo reservar el mismo día?</span>
+            <span class="faq-chevron">⌄</span>
+          </button>
+          <div class="faq-a">Sí, siempre que haya disponibilidad. Te recomendamos escribirnos con al menos 2 horas de anticipación.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span>🥥 ¿Aceptan pagos con tarjeta?</span>
+            <span class="faq-chevron">⌄</span>
+          </button>
+          <div class="faq-a">Aceptamos efectivo, transferencia y tarjeta. Coordinamos el método de pago por WhatsApp antes de la entrega.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CONTACTO + FORMULARIO -->
+  <section class="section" id="contacto">
+    <div class="wrap">
+      <div class="contact-section">
+        <div>
+          <div class="eyebrow">Reserva ahora</div>
+          <h2>Cupos limitados por día</h2>
+          <p>Escríbenos y te confirmamos disponibilidad de tu vehículo en minutos.</p>
+        </div>
+        <div class="contact-card">
+          <div class="contact-row"><div class="contact-icon"> <i class="fa-solid fa-location-dot"></i> </div><div>Av. Newball, frente al Hotel Sunrise Beach — San Andrés Isla</div></div>
+          <div class="contact-row"><div class="contact-icon"> <i class="fa-brands fa-whatsapp"></i> </div><div>WhatsApp: +57 300 5940627 </div></div>
+          <a href="mailto:cocowheelssai@gmail.com" class="contact-row"><div class="contact-icon"><i class="fa-solid fa-envelope"></i></div><div>Email: cocowheelssai@gmail.com</div></a>
+          <a href="https://www.instagram.com/cocoexploresai/" target="_blank" class="contact-row"><div class="contact-icon"> <i class="fa-brands fa-instagram"></i> </div><div> Instagram: @cocoexploresai</div></a>
+          <a href="#" onclick="abrirWhatsApp(); return false;" class="whatsapp-btn wa-reserve-btn" >Escríbenos por WhatsApp →</a>
+          <div style="text-align:center; font-size:11.5px; color:#F7F1E3; margin-top:10px;">⏰ Reserva con mínimo 1 día de anticipación</div>
+        </div>
+      </div>
+
+
+<!-- CONTACTO + FORMULARIO -->
+<!-- <section class="section" id="contacto">
+  <div class="wrap">
+    <div class="contact-section">
+      <div>
+        <div class="eyebrow">Reserva ahora</div>
+        <h2>Cupos limitados por día</h2>
+        <p>Escríbenos y te confirmamos disponibilidad de tu vehículo en minutos.</p>
+      </div>
+
+      <div class="contact-card">
+
+        <div class="contact-row">
+          <div class="contact-icon">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <div>Av. Newball, frente al Hotel Sunrise Beach — San Andrés Isla</div>
+        </div>
+
+        <a href="#" onclick="abrirWhatsApp(); return false;" class="contact-row">
+          <div class="contact-icon">
+            <i class="fa-brands fa-whatsapp"></i>
+          </div>
+          <div>WhatsApp: +57 300 5940627</div>
+        </a>
+
+        <a href="mailto:cocowheelssai@gmail.com" class="contact-row">
+          <div class="contact-icon">
+            <i class="fa-solid fa-envelope"></i>
+          </div>
+          <div>Email: cocowheelssai@gmail.com</div>
+        </a>
+
+        <a href="https://www.instagram.com/cocoexploresai/" target="_blank" class="contact-row">
+          <div class="contact-icon">
+            <i class="fa-brands fa-instagram"></i>
+          </div>
+          <div>Instagram: @cocoexploresai</div>
+        </a>
+
+        <a href="#" onclick="abrirWhatsApp(); return false;" class="whatsapp-btn wa-reserve-btn">
+          Escríbenos por WhatsApp →
+        </a>
+
+        <div style="text-align:center; font-size:11.5px; color:#F7F1E3; margin-top:10px;">
+          ⏰ Reserva con mínimo 1 día de anticipación
+        </div>
+
+      </div>
+    </div>
+  </div> -->
+
+      <div style="height:40px;"></div>
+
+      <div class="section-head">
+        <div class="eyebrow">Escríbenos</div>
+        <div class="section-title">Formulario de contacto</div>
+        <div class="section-sub">Déjanos tus datos y te respondemos por WhatsApp o correo.</div>
+      </div>
+
+      <div class="form-section">
+        <div class="form-box">
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScb_HlXDkhtXP551aTtgEL8835rLS4o5EpYaDNZct0Y3MHfMA/viewform?embedded=true" loading="lazy"></iframe>
+        </div>
+        <div class="map-wrap">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15576.25381349991!2d-81.6972003!3d12.5780677!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f05a50c82dd299f%3A0xff24ca928941a2b0!2sCOCO%20wheels!5e0!3m2!1ses-419!2sco!4v1783229475256!5m2!1ses-419!2sco"
+            loading="lazy"
+            allowfullscreen
+            referrerpolicy="strict-origin-when-cross-origin">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <div style="display:flex; align-items:center; gap:14px; margin-bottom:12px;">
+            <img src="data/logo_cropped.png" alt="Coco Explore SAI" style="height:76px; width:auto; object-fit:contain;">
+            <div class="footer-logo">Coco Explore SAI</div>
+          </div>
+          <div class="footer-note" style="text-align:left; margin-top:6px;">Vive San Andrés por tierra y por mar. Vehículos, embarcaciones y experiencias en un solo lugar.</div>
+        </div>
+        <div>
+          <div class="footer-col-title">Navegación</div>
+          <div class="footer-links">
+            <a href="#servicios">Servicios</a>
+            <a href="#fotos">Fotos</a>
+            <a href="#trabajaconnosotros">¿Cómo contactarnos?</a>
+            <a href="#que-hacer">¿Qué hacer?</a>
+            <a href="#alianzas"> Alianzas</a>
+            <a href="#faq">FAQ</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">Contáctanos</div>
+          <div class="footer-links">
+            <a href= "javascript:void(0)" onclick="abrirWhatsApp()" > <i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+            <a href="https://www.instagram.com/cocoexploresai/"> <i class="fa-brands fa-instagram"></i> Instagram</a>
+            <a href="mailto:cocowheelssai@gmail.com"> <i class="fa-solid fa-envelope"></i>  Email</a>
+            <a href="https://www.youtube.com/@CocoExploreSAI"><i class="fa-brands fa-youtube"></i> Youtube</a>
+
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-note" style="margin:0;">© 2026 Coco Explore SAI. San Andrés Isla, Colombia.</div>
+        <div class="footer-note" style="margin:0;">Vive la isla por tierra y por mar</div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" onclick="abrirWhatsApp(); return false;"  class="float-wa" title="WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.27 16.61L5.08 16.29C4.24 14.98 3.8 13.46 3.8 11.91C3.8 7.37 7.5 3.67 12.05 3.67C14.25 3.67 16.32 4.53 17.87 6.09C19.42 7.65 20.28 9.71 20.28 11.92C20.27 16.46 16.58 20.15 12.04 20.15Z"/>
+    </svg>
+  </a>
+
+  <!-- MODAL CONTACTO -->
+  <div id="contactModal" class="modal">
+    <div class="modal-box">
+      <button class="contact-modal-close" onclick="cerrarModal()" aria-label="Cerrar">✕</button>
+      <div class="contact-modal-icon">🥥</div>
+      <h2>Coco Explore SAI</h2>
+      <p>¿Cómo deseas solicitar información?</p>
+      <small>Con gusto te ayudaremos a elegir el mejor vehículo o experiencia para tu viaje.</small>
+      <button class="btn-wa" onclick="abrirWhatsApp()">
+        <span class="btn-icon-circle btn-icon-wa">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.27 16.61L5.08 16.29C4.24 14.98 3.8 13.46 3.8 11.91C3.8 7.37 7.5 3.67 12.05 3.67C14.25 3.67 16.32 4.53 17.87 6.09C19.42 7.65 20.28 9.71 20.28 11.92C20.27 16.46 16.58 20.15 12.04 20.15Z"/></svg>
+        </span>
+        Contactar por WhatsApp
+      </button>
+      <button class="btn-form" onclick="irFormulario()">
+        <span class="btn-icon-circle btn-icon-form">📝</span>
+        Dejar mis datos
+      </button>
+    </div>
+  </div>
+
+  <!-- MODAL ACTIVIDAD (QUE HACER) -->
+  <div id="activityModal" class="modal">
+    <div class="modal-box activity-modal-box">
+      <button class="activity-modal-close" onclick="cerrarActividad()" aria-label="Cerrar">✕</button>
+      <div class="activity-modal-visual" id="activityModalVisual">🏝️</div>
+      <div class="activity-modal-content">
+        <h2 id="activityModalTitle">Título</h2>
+        <p id="activityModalDesc" class="activity-modal-desc">Descripción</p>
+        <a href="#contacto" class="whatsapp-btn" onclick="cerrarActividad()">Preguntar por esta experiencia →</a>
+      </div>
+    </div>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -203,7 +203,7 @@ const activityData = [
     desc: 'Relájate en playas de arena blanca y mar tranquilo, ideales para nadar, descansar y disfrutar de un ambiente mucho más calmado que el centro de la isla.'
 },
 {
-    img: 'data/Descubre/iglesiaLALOMA.png',
+    img: 'data/Descubre/IglesiaLALOMA.png',
     title: 'Iglesia Bautista La Loma',
     desc: 'Visita la iglesia más antigua de San Andrés y disfruta de uno de los mejores miradores naturales, desde donde podrás apreciar gran parte de la isla.'
 },

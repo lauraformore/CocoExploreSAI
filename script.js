@@ -380,8 +380,7 @@ function cerrarActividad(){
 }
 
 /* ============================================================
-   MENÚ QUE SE OCULTA AL BAJAR Y REAPARECE AL SUBIR
-   (un solo bloque — antes estaba duplicado)
+   MENÚ 
    ============================================================ */
 (() => {
     const nav = document.querySelector('nav');
@@ -413,7 +412,7 @@ function cerrarActividad(){
 })();
 
 /* ============================================================
-   MENÚ HAMBURGUESA (móvil)
+   MENÚ HAMBURGUESA
    ============================================================ */
 (() => {
     const burger = document.getElementById('navBurger');
@@ -448,7 +447,7 @@ function cerrarActividad(){
 })();
 
 /* ============================================================
-   CERRAR MODALES HACIENDO CLIC AFUERA O CON ESCAPE
+   CERRAR MODALES
    ============================================================ */
 (() => {
     function closeAnyOpenModal(){
@@ -470,7 +469,7 @@ function cerrarActividad(){
 })();
 
 /* ============================================================
-   ANIMACIONES DE ENTRADA AL HACER SCROLL (Intersection Observer)
+   ANIMACIONES DE ENTRADA AL HACER SCROLL
    ============================================================ */
 function observeReveal(){
     if (!revealObserver) {

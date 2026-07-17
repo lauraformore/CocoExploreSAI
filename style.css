@@ -132,9 +132,7 @@ nav.nav-scrolled{
 .section-sub{ font-size: 14.5px; color: #4a5a5c; margin-top: 10px; }
 
 /* ============================================================
-   HERO — se conserva el degradado "mar de 7 colores" tal cual.
-   AJUSTE 2: círculos decorativos difuminados detrás del contenido
-   (no cambian el color de fondo, solo agregan profundidad)
+   HERO 
    ============================================================ */
 .hero{
   background: radial-gradient(120% 70% at 20% 0%, rgba(255,255,255,0.22), transparent 60%), linear-gradient(160deg, var(--hero-c1) 0%, var(--hero-c2) 16%, var(--hero-c3) 32%, var(--hero-c4) 48%, var(--hero-c5) 64%, var(--hero-c6) 82%, var(--hero-c7) 100%);
@@ -175,7 +173,7 @@ nav.nav-scrolled{
   .hero-stats > div{ padding: 0 18px; }
   .hero-stats > div + div::before{ display:none; }
 }
-.stat-num{ font-family:'Baloo 2', sans-serif; font-weight: 800; font-size: 30px; color: var(--sol); }
+.stat-num{ font-family:'Baloo 2', sans-serif; font-weight: 800; font-size: 30px; color: var(--coral); }
 .stat-label{ font-family:'Space Mono', monospace; font-size: 10.5px; color: var(--arena); letter-spacing: 1.5px; text-transform:uppercase; opacity:0.85; margin-top: 4px; }
 .waves-bottom{ position:absolute; bottom:-2px; left:0; width:100%; line-height:0; z-index:1; }
 
@@ -222,8 +220,7 @@ nav.nav-scrolled{
 .step-desc{ font-size: 13px; color: #4a5a5c; margin-top: 6px; }
 
 /* ============================================================
-   GALERIA / FOTOS — la foto domina, el texto es un
-   overlay delgado sobre la imagen (como una tarjeta de Instagram)
+   GALERIA
    ============================================================ */
 .gallery-carousel{ position:relative; display:flex; align-items:center; gap: 20px; }
 .gallery-viewport{ flex:1; overflow:hidden; border-radius: 26px; }
@@ -334,8 +331,7 @@ footer{ background: var(--turquesa-deep); padding: 36px 0 26px 0; text-align:cen
 }
 
 /* ============================================================
-   CLIMA — AJUSTE 1: ahora se ve como una cápsula integrada,
-   no como una franja recta pegada al borde
+   CLIMA
    ============================================================ */
 .weather-bar{
   background: linear-gradient(90deg, var(--turquesa-deep), var(--alga) 55%, var(--sol) 130%);
@@ -480,3 +476,74 @@ footer{ background: var(--turquesa-deep); padding: 36px 0 26px 0; text-align:cen
   50%{ transform: translateY(-4px); }
 }
 .bento-featured{ animation: float-idle 5s ease-in-out infinite; }
+
+
+/* ============================================================
+   MEJORAS MÓVIL — agregar al final de style.css
+   ============================================================ */
+
+/* Tipografía fluida: el título y los section-title dejan de ser
+   fijos y se adaptan al ancho real de la pantalla */
+.hero h1{ font-size: clamp(28px, 8vw, 48px); }
+.section-title{ font-size: clamp(23px, 6vw, 34px); }
+.bento-featured-title{ font-size: clamp(19px, 5vw, 24px); }
+
+@media (max-width: 600px){
+
+  /* Menos aire lateral desperdiciado en pantallas angostas */
+  .wrap{ padding: 0 18px; }
+  .nav-inner{ padding: 6px 18px; gap: 10px; }
+  .logo-group{ margin-right: 0; gap: 8px; }
+  .logo-name{ font-size: 16px; }
+  .logo-group img{ height: 52px !important; } /* pisa el inline style del HTML */
+
+  /* Secciones menos espaciadas verticalmente (menos scroll) */
+  .section{ padding: 52px 0; }
+  .hero{ padding: 46px 0 84px 0; }
+  .hero p{ font-size: 14px; }
+  .hero-buttons{ gap: 12px; }
+  .btn-primary, .btn-secondary{ padding: 13px 22px; font-size: 14px; }
+
+  /* Stats del hero: de fila apretada a grid 2x2, sin separadores */
+  .hero-stats{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px 0;
+  }
+  .hero-stats > div{ padding: 0; }
+  .hero-stats > div::before{ display: none; }
+  .stat-num{ font-size: 24px; }
+  .stat-label{ font-size: 9.5px; }
+
+  /* Bento destacado (Renta de Mula) más compacto */
+  .bento-featured{ padding: 24px 20px; }
+
+  /* Flechas del carrusel más chicas para no robarle espacio a la foto */
+  .gallery-carousel{ gap: 8px; }
+  .gallery-arrow{ width: 38px; height: 38px; font-size: 16px; }
+  .gallery-title{ font-size: 16px; }
+  .gallery-desc{ font-size: 12px; }
+
+  /* Formulario y mapa: menos alto para no obligar a un scroll eterno */
+  .form-box, .map-wrap{ height: 460px; }
+
+  /* Tarjetas de "qué hacer" un poco más bajas */
+  .activity-card{ height: 180px; }
+
+  /* Alianzas: chips más chicos y con menos espacio entre ellos */
+  .partners-row{ gap: 12px; }
+  .partner-chip{ padding: 11px 16px; font-size: 12px; }
+
+  /* Barra de clima: texto más chico para que no se corte */
+  .weather-bar{ font-size: 11.5px; padding: 9px 14px; gap: 8px; }
+
+  /* Modal de contacto un poco más compacto */
+  .modal-box{ padding: 28px 22px 22px 22px; }
+}
+
+@media (max-width: 380px){
+  /* Pantallas muy angostas (iPhone SE y similares) */
+  .wrap{ padding: 0 14px; }
+  .hero-stats{ grid-template-columns: 1fr 1fr; gap: 18px 0; }
+  .stat-num{ font-size: 21px; }
+}
